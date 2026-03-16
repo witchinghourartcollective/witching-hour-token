@@ -1,41 +1,60 @@
 # Witching Hour Token
 
-Hardhat project for the `HourToken` ERC-20 contract.
+`hOUR` is the on-chain signal for the Witching Hour world on Base.
 
-## Environment
+Built as a fixed-supply token with a dark ritual theme, `hOUR` is designed to anchor the project's economy, community access, and future app experiences around a single verified contract.
 
-Create a `.env` file with:
+## Token
 
-```shell
-PRIVATE_KEY=0x...
-LIQUIDITY_WALLET=0x...
-REWARD_WALLET=0x...
-```
+- Name: `Witching Hour`
+- Symbol: `hOUR`
+- Network: `Base`
+- Chain ID: `8453`
+- Contract: `0xFC1c0FFF99845676A588CE21c28C4859F3035866`
+- BaseScan: `https://basescan.org/address/0xFC1c0FFF99845676A588CE21c28C4859F3035866#code`
 
-`PRIVATE_KEY` is optional for local compile and test. It is only used for Base deployment when it is a valid 32-byte hex private key.
+## Supply
 
-See `.env.example` for the tracked template.
+- Fixed supply: `21,369,777 hOUR`
+- Decimals: `18`
+- Verified on BaseScan
 
-## Commands
+## Current Status
 
-```shell
-npm run compile
-npm test
-npm run deploy
-npm run inspect:base
-```
+- Contract is deployed
+- Contract is verified
+- Trading is currently disabled
+- Liquidity has not been added yet
 
-## Contract behavior covered by tests
+## What hOUR Represents
 
-- Constructor mints the fixed supply to the deployer
-- Non-exempt wallets cannot transfer before trading is enabled
-- Transfers apply burn, liquidity, and reward fees
-- Burn fee doubles during configured witching hours
+`hOUR` is intended to sit at the center of the Witching Hour ecosystem:
 
-## App handoff
+- community identity
+- future app integration
+- collectible and experiential utility
+- on-chain coordination for the broader project
 
-Use these tracked files when handing the token to an app team or Replit:
+This repository tracks the deployed token contract and its integration files for the app layer.
 
-- `src/integration/hourToken.ts`: deployed address, Base chain config, token metadata, and app-facing ABI
-- `INTEGRATION.md`: live deployment state and integration notes
-- `.env.example`: placeholder environment variables only
+## Official Integration Files
+
+For app and frontend integration, use:
+
+- `INTEGRATION.md`
+- `src/integration/hourToken.ts`
+
+## Risk / Admin Notes
+
+The contract is live, but launch configuration is still intentionally conservative:
+
+- trading has not been enabled yet
+- the owner role is still active
+- fees and witching-hour settings remain owner-controlled at this stage
+
+That is deliberate while the app and launch flow are being finalized.
+
+## Links
+
+- BaseScan: `https://basescan.org/address/0xFC1c0FFF99845676A588CE21c28C4859F3035866#code`
+- GitHub: `https://github.com/witchinghourartcollective/witching-hour-token`
